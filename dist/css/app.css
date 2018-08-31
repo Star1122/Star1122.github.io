@@ -294,7 +294,7 @@ header {
       fill: var(--clr-accent); }
 
 .container {
-  padding: 2.25rem 150px;
+  padding: 2.25rem 150px 1.5rem;
   font-size: 0.75rem; }
 
 .search {
@@ -362,6 +362,8 @@ header {
     border-radius: 4px; }
     .table__item .btn {
       padding: 0.5rem 0.75rem; }
+    .table__item:last-child {
+      margin-bottom: 0; }
 
 /* =================================================================== */
 /* ------------------------------ Button ----------------------------- */
