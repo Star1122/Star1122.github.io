@@ -1,0 +1,25 @@
+{
+  "name": "dartboard",
+  "version": "1.0.0",
+  "description": "Dartboard dashboard",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "browser-sync": "^2.24.7",
+    "cssnano": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-wait": "0.0.2"
+  }
+}

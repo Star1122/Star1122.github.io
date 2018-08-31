@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>Dartboard</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="dist/css/app.min.css"/>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header class="d-flex align-items-center">
+        <a href="/" class="logo"><img src="img/logo.png"></a>
+
+        <div class="nav flex-1 d-flex-between ml-4">
+            <div class="d-flex">
+                <a href="/" class="nav__link active">
+                    <svg class="sprite-icon mr-4" role="img" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#dashboard"></use>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="/" class="nav__link">
+                    <svg class="sprite-icon mr-4" role="img" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#report"></use>
+                    </svg>
+                    <span>Reports</span>
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <a href="#">
+                    <span>Anne Thomas</span>
+                    <svg class="sprite-icon arrow-down ml-2" role="img" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#arrow-down"></use>
+                    </svg>
+                </a>
+
+                <img src="img/user.jpg" class="user-avatar ml-3 round">
+
+                <div class="notification ml-3">
+                    <svg class="sprite-icon" role="img" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#notification"></use>
+                    </svg>
+
+                    <span class="badge round">3</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" class="container">
+        <div class="d-flex-between">
+            <h1>Profiles</h1>
+
+            <button class="btn btn-submit">
+                <span>Submit Form</span>
+                <svg class="sprite-icon" role="img" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#submit"></use>
+                </svg>
+            </button>
+        </div>
+
+        <h3 class="mt-4">Form Search</h3>
+
+        <div class="search mt-3 d-flex-between">
+            <div class="search__wrapper flex-1 d-flex">
+                <div class="search__item">
+                    <span>City: New York</span>
+                    <a class="search__item__close">
+                        <svg class="sprite-icon" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="search__item">
+                    <span>Country: France</span>
+                    <a class="search__item__close">
+                        <svg class="sprite-icon" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="search__item">
+                    <span>IP: 216.58.216.164</span>
+                    <a class="search__item__close">
+                        <svg class="sprite-icon" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn">Clear</button>
+        </div>
+
+        <div class="table">
+            <div class="table__header d-flex-between">
+                <div class="flex-1">Select</div>
+                <div class="flex-2">Profile name</div>
+                <div class="flex-2">Type</div>
+                <div class="flex-3">Number Identified</div>
+                <div class="flex-4">Created</div>
+                <div class="flex-4 d-flex-end">
+                    <span class="font-weight-normal"><strong>10</strong> of <strong>1000</strong> results</span>
+                    <a class="page-nav d-flex-center ml-4" id="prev">
+                        <svg class="sprite-icon" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                        </svg>
+                    </a>
+                    <a class="page-nav d-flex-center ml-2" id="next">
+                        <svg class="sprite-icon" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+
+            <div class="table__item d-flex-between">
+                <div class="flex-1"><input type="checkbox"></div>
+                <div class="flex-2">NAI</div>
+                <div class="flex-2">Location</div>
+                <div class="flex-3">32</div>
+                <div class="flex-4">26/04/2018 5:00 PM</div>
+                <div class="flex-4 d-flex-end">
+                    <button class="btn view">View</button>
+                    <button class="btn edit">Edit</button>
+                    <button class="btn delete" disabled>Delete</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dist/js/app.min.js"></script>
+</body>
+</html>
