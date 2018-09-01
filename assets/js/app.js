@@ -13,10 +13,11 @@ var app = {
   /**
    * Initialize function
    */
-  init: function() {
+  init: function () {
     this.tableItemGenerator();
     this.pageNavigation();
     this.clearSelectedItem();
+    this.changePageCount();
   },
 
   /**
@@ -51,7 +52,9 @@ var app = {
     var end = Math.min(this.tableView.tableItems.length, this.tableView.count * this.tableView.page);
 
     for (var i = start; i < end; i++) {
-      var index = this.tableView.selectedTableItems.findIndex(function (item) { return item === i });
+      var index = this.tableView.selectedTableItems.findIndex(function (item) {
+        return item === i;
+      });
       var checked = (index > -1) ? ' checked' : '';
       var dNone = (this.tableView.selectedTableItems.length > 0) ? ' d-none' : '';
 
@@ -90,7 +93,9 @@ var app = {
       if (this.checked) {
         self.tableView.selectedTableItems.push(id);
       } else {
-        var index = self.tableView.selectedTableItems.findIndex(function (item) { return item === id });
+        var index = self.tableView.selectedTableItems.findIndex(function (item) {
+          return item === id;
+        });
         if (index > -1) {
           self.tableView.selectedTableItems.splice(index, 1);
         }
@@ -132,12 +137,11 @@ var app = {
       $('#prev').addClass('disabled');
     } else {
       $('#prev').removeClass('disabled');
-
-      if (this.tableView.page === Math.ceil(this.tableView.tableItems.length / this.tableView.count)) {
-        $('#next').addClass('disabled');
-      } else {
-        $('#next').removeClass('disabled');
-      }
+    }
+    if (this.tableView.page === Math.ceil(this.tableView.tableItems.length / this.tableView.count)) {
+      $('#next').addClass('disabled');
+    } else {
+      $('#next').removeClass('disabled');
     }
 
     // Update count of items in page
@@ -177,6 +181,38 @@ var app = {
       $('#submit_form').removeClass('d-none');
       $('#filter_profiles').addClass('d-none');
     }
+  },
+
+  /**
+   * Change page count
+   */
+  changePageCount: function () {
+    var self = this;
+
+    // Show count list
+    $('.page-size__current').on('click', function () {
+      $(this).addClass('active');
+    });
+
+    // Update page count
+    $('.page-size__list__item').on('click', function () {
+      var count = parseInt($(this).html());
+      $('#current').html(count);
+      self.tableView.count = count;
+      self.tableView.page = 1;
+
+      self.updateTableItems();
+
+      $('.page-size__current').removeClass('active');
+    });
+
+    // Hide count list
+    document.addEventListener("mousedown", function (e) {
+      var clsName = e.target.className;
+      if (!clsName || clsName.indexOf('page-size') === -1) {
+        $('.page-size__current').removeClass('active');
+      }
+    });
   }
 };
 

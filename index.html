@@ -152,10 +152,27 @@
                 <div class="flex-3">Number Identified</div>
                 <div class="flex-4">Created</div>
                 <div class="flex-4 d-flex-end ml-3">
-                    <span class="font-weight-normal"><strong id="count">10</strong> of <strong id="total">1000</strong> results</span>
+                    <div class="page-size">
+                        <a class="page-size__current">
+                            <span id="current">10</span>
+                            <svg class="sprite-icon ml-2" role="img" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#arrow-down"></use>
+                            </svg>
+                        </a>
+
+                        <ul class="page-size__list text-center">
+                            <li class="page-size__list__item">10</li>
+                            <li class="page-size__list__item">15</li>
+                            <li class="page-size__list__item">20</li>
+                            <li class="page-size__list__item">25</li>
+                        </ul>
+                    </div>
+
+                    <span class="font-weight-normal ml-4"><strong id="count">10</strong> of <strong id="total">1000</strong> results</span>
+
                     <a class="page-nav d-flex-center ml-4" id="prev">
                         <svg class="sprite-icon" role="img" aria-hidden="true">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#arrow-left"></use>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#arrow-right"></use>
                         </svg>
                     </a>
                     <a class="page-nav d-flex-center ml-2" id="next">
