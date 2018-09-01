@@ -206,6 +206,9 @@ h4 {
 .justify-content-end, .d-flex-end {
   justify-content: flex-end; }
 
+.d-none {
+  display: none; }
+
 .flex-1 {
   flex: 1; }
 
@@ -297,6 +300,20 @@ header {
   padding: 2.25rem 150px 1.5rem;
   font-size: 0.75rem; }
 
+.section__selected {
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+  margin-top: 3rem;
+  background-color: rgba(19, 175, 125, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+  .section__selected h2 {
+    font-weight: 600;
+    color: var(--clr-basic); }
+  .section__selected .btn {
+    padding: 0.5rem 0.75rem;
+    background-color: transparent; }
+
 .search {
   padding: 0.75rem;
   background-color: var(--clr-block);
@@ -349,11 +366,12 @@ header {
         width: 0.5rem;
         height: 0.5rem;
         fill: var(--clr-accent); }
-      .table__header .page-nav:not([disabled]):hover {
+      .table__header .page-nav:not(.disabled):hover {
         background-color: var(--clr-accent); }
-        .table__header .page-nav:not([disabled]):hover .sprite-icon {
+        .table__header .page-nav:not(.disabled):hover .sprite-icon {
           fill: var(--clr-block); }
   .table__item {
+    height: 3rem;
     margin-bottom: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: var(--clr-block);
@@ -384,17 +402,24 @@ header {
     margin-left: 0.5rem;
     fill: var(--clr-accent); }
   .btn:disabled {
-    color: var(--clr-basicLL);
-    cursor: default; }
-  .btn:not([disabled]):hover, .btn:not([disabled]):active, .btn:not([disabled]):focus, .btn:not([disabled]).active {
+    color: var(--clr-basicLL) !important;
+    cursor: default !important; }
+    .btn:disabled .sprite-icon {
+      fill: var(--clr-basicLL) !important; }
+  .btn:not([disabled]):hover, .btn:not([disabled]):active, .btn:not([disabled]).active {
     background-color: var(--clr-accent);
     color: var(--clr-block);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     outline: none; }
-    .btn:not([disabled]):hover .sprite-icon, .btn:not([disabled]):active .sprite-icon, .btn:not([disabled]):focus .sprite-icon, .btn:not([disabled]).active .sprite-icon {
+    .btn:not([disabled]):hover .sprite-icon, .btn:not([disabled]):active .sprite-icon, .btn:not([disabled]).active .sprite-icon {
       fill: var(--clr-block); }
+  .btn:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none; }
 
 /*----- Link -----*/
 a {
@@ -404,13 +429,20 @@ a {
   a .sprite-icon {
     width: 1rem;
     fill: var(--clr-basic); }
-  a:disabled {
-    color: var(--clr-basicLL);
-    cursor: default; }
-  a:not([disabled]):hover, a:not([disabled]):active, a:not([disabled]):focus, a:not([disabled]).active {
+  a.disabled {
+    color: var(--clr-basicLL) !important;
+    cursor: default !important; }
+    a.disabled .sprite-icon {
+      fill: var(--clr-basicLL) !important; }
+  a:not(.disabled):hover, a:not(.disabled):active, a:not(.disabled).active {
     color: var(--clr-accent); }
-    a:not([disabled]):hover .sprite-icon, a:not([disabled]):active .sprite-icon, a:not([disabled]):focus .sprite-icon, a:not([disabled]).active .sprite-icon {
+    a:not(.disabled):hover .sprite-icon, a:not(.disabled):active .sprite-icon, a:not(.disabled).active .sprite-icon {
       fill: var(--clr-accent); }
+  a:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none; }
 
 /* =================================================================== */
 /* ----------------------------- Checkbox ---------------------------- */

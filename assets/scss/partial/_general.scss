@@ -85,6 +85,9 @@ h4 {
   justify-content: flex-end;
 }
 
+.d-none {
+  display: none;
+}
 
 .d-flex-center {
   @extend .d-flex;

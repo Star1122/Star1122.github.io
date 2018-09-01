@@ -89,6 +89,25 @@ header {
   font-size: 0.75rem;
 }
 
+.section {
+  &__selected {
+    padding: 0.75rem 1rem 0.75rem 1.25rem;
+    margin-top: 3rem;
+    background-color: rgba(19, 175, 125, 0.1);
+    @include borderRadius(4px);
+
+    h2 {
+      font-weight: 600;
+      color: var(--clr-basic);
+    }
+
+    .btn {
+      padding: 0.5rem 0.75rem;
+      background-color: transparent;
+    }
+  }
+}
+
 .search {
   padding: 0.75rem;
   background-color: var(--clr-block);
@@ -161,7 +180,7 @@ header {
         fill: var(--clr-accent);
       }
 
-      &:not([disabled]):hover {
+      &:not(.disabled):hover {
         background-color: var(--clr-accent);
 
         .sprite-icon {
@@ -172,6 +191,7 @@ header {
   }
 
   &__item {
+    height: 3rem;
     margin-bottom: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: var(--clr-block);

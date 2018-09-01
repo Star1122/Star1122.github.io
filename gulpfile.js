@@ -5,6 +5,7 @@ var autoprefixer = require('autoprefixer'),
   gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
+  gutil = require('gulp-util'),
   sourcemaps = require('gulp-sourcemaps'),
   postcss = require('gulp-postcss'),
   wait = require('gulp-wait'),
@@ -19,7 +20,8 @@ var autoprefixer = require('autoprefixer'),
 gulp.task('sass', function () {
   gulp.src('assets/scss/**/*.scss')
     .pipe(wait(100))
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass())
+    .on('error', gutil.log)
     .pipe(gulp.dest('dist/css/'));
 });
 
@@ -52,6 +54,7 @@ gulp.task('js', function () {
   return gulp.src('assets/js/app.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
+    .on('error', gutil.log)
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))
