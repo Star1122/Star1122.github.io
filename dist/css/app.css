@@ -411,3 +411,39 @@ a {
     color: var(--clr-accent); }
     a:not([disabled]):hover .sprite-icon, a:not([disabled]):active .sprite-icon, a:not([disabled]):focus .sprite-icon, a:not([disabled]).active .sprite-icon {
       fill: var(--clr-accent); }
+
+/* =================================================================== */
+/* ----------------------------- Checkbox ---------------------------- */
+/* =================================================================== */
+.css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+  .css-checkbox + label.css-label {
+    height: 15px;
+    padding-left: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    line-height: 15px;
+    vertical-align: middle;
+    cursor: pointer; }
+  .css-checkbox:checked + label.css-label {
+    background-position: 0 -15px; }
+
+label.css-label {
+  background-image: url("../../img/csscheckbox.png");
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
