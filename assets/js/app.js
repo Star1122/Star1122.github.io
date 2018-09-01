@@ -208,8 +208,7 @@ var app = {
 
     // Hide count list
     document.addEventListener("mousedown", function (e) {
-      var clsName = e.target.className;
-      if (!clsName || clsName.indexOf('page-size') === -1) {
+      if (!$.contains(e.target, document.getElementsByClassName('page-size'))) {
         $('.page-size__current').removeClass('active');
       }
     });
