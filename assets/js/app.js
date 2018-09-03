@@ -198,6 +198,7 @@ var app = {
     $('.page-size__list__item').on('click', function () {
       var count = parseInt($(this).html());
       $('#current').html(count);
+      console.log(count);
       self.tableView.count = count;
       self.tableView.page = 1;
 
@@ -208,7 +209,8 @@ var app = {
 
     // Hide count list
     document.addEventListener("mousedown", function (e) {
-      if (!$.contains(e.target, document.getElementsByClassName('page-size'))) {
+      var clsName = e.target.className;
+      if (!clsName || typeof clsName !== 'string' || clsName.indexOf('page-size') === -1) {
         $('.page-size__current').removeClass('active');
       }
     });
