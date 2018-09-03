@@ -41,7 +41,7 @@
     <header class="d-flex align-items-center">
         <a href="/" class="logo"><img src="img/logo.png"></a>
 
-        <div class="nav flex-1 d-flex-between ml-4">
+        <div class="nav flex-1 d-flex--between ml-4">
             <div class="d-flex">
                 <a href="/" class="nav__link active">
                     <svg class="sprite-icon mr-4" role="img" aria-hidden="true">
@@ -79,17 +79,17 @@
     </header>
 
     <main role="main" class="container">
-        <div class="d-flex-between">
+        <div class="d-flex--between">
             <h1>Profiles</h1>
 
-            <button class="btn btn-submit" id="submit_form">
+            <button class="btn btn--submit" id="submit_form">
                 <span>Submit Form</span>
                 <svg class="sprite-icon" role="img" aria-hidden="true">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#submit"></use>
                 </svg>
             </button>
 
-            <button class="btn btn-submit d-none" id="filter_profiles">
+            <button class="btn btn--submit d-none" id="filter_profiles">
                 <span>Filter Profiles</span>
                 <svg class="sprite-icon" role="img" aria-hidden="true">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#submit"></use>
@@ -100,11 +100,11 @@
         <div class="section__search">
             <h3 class="mt-4">Form Search</h3>
 
-            <div class="search mt-3 d-flex-between">
+            <div class="search mt-3 d-flex--between">
                 <div class="search__wrapper flex-1 d-flex">
                     <div class="search__item">
                         <span>City: New York</span>
-                        <a class="search__item__close">
+                        <a class="close-item">
                             <svg class="sprite-icon" role="img" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
                             </svg>
@@ -113,7 +113,7 @@
 
                     <div class="search__item">
                         <span>Country: France</span>
-                        <a class="search__item__close">
+                        <a class="close-item">
                             <svg class="sprite-icon" role="img" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
                             </svg>
@@ -122,7 +122,7 @@
 
                     <div class="search__item">
                         <span>IP: 216.58.216.164</span>
-                        <a class="search__item__close">
+                        <a class="close-item">
                             <svg class="sprite-icon" role="img" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
                             </svg>
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <div class="section__selected d-flex-between d-none">
+        <div class="section__selected d-flex--between d-none mt-6">
             <h2>4 Selected</h2>
 
             <div class="d-flex">
@@ -145,13 +145,13 @@
         </div>
 
         <div class="table">
-            <div class="table__header d-flex-between">
+            <div class="table__header d-flex--between">
                 <div class="flex-1">Select</div>
                 <div class="flex-2">Profile name</div>
                 <div class="flex-2">Type</div>
                 <div class="flex-3">Number Identified</div>
                 <div class="flex-4">Created</div>
-                <div class="flex-4 d-flex-end ml-3">
+                <div class="flex-4 d-flex--end ml-3">
                     <div class="page-size">
                         <a class="page-size__current">
                             <span id="current">10</span>
@@ -170,16 +170,121 @@
 
                     <span class="font-weight-normal ml-4"><strong id="count">10</strong> of <strong id="total">1000</strong> results</span>
 
-                    <a class="page-nav d-flex-center ml-4" id="prev">
+                    <a class="page-nav d-flex--center ml-4" id="prev">
                         <svg class="sprite-icon" role="img" aria-hidden="true">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#arrow-right"></use>
                         </svg>
                     </a>
-                    <a class="page-nav d-flex-center ml-2" id="next">
+                    <a class="page-nav d-flex--center ml-2" id="next">
                         <svg class="sprite-icon" role="img" aria-hidden="true">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#arrow-right"></use>
                         </svg>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--submit d-none">
+            <div class="modal__content">
+                <div class="tab__list mb-6">
+                    <a class="tab__list__item active" id="new-form">New Form</a>
+                    <a class="tab__list__item" id="prev-forms">Previous Forms</a>
+                </div>
+
+                <div class="section__new-form">
+                    <div class="d-flex--between">
+                        <div class="option__list">
+                            <a class="option__list__item active">Location</a>
+                            <a class="option__list__item">Persona</a>
+                            <a class="option__list__item">Network</a>
+                        </div>
+
+                        <button class="btn" id="clear_option">Clear all</button>
+                    </div>
+
+                    <h3 class="mt-5" id="filter_type">Location</h3>
+
+                    <div class="filter__list">
+                        <div class="filter__list--sub" id="filter_location">
+                            <div class="filter__item d-flex--between mb-2">
+                                <div>
+                                    <input type="text" class="filter__item__input" placeholder="Enter latitude">
+                                    <input type="text" class="filter__item__input" placeholder="Enter longitude">
+                                    <input type="text" class="filter__item__input" placeholder="Enter radius">
+                                </div>
+
+                                <a class="close-item">
+                                    <svg class="sprite-icon" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="filter__list--sub d-none" id="filter_persona">
+                            <div class="filter__item d-flex--between mb-2">
+                                <div>
+                                    <input type="text" class="filter__item__input" placeholder="Enter latitude">
+                                    <input type="text" class="filter__item__input" placeholder="Enter longitude">
+                                    <input type="text" class="filter__item__input" placeholder="Enter radius">
+                                    <input type="text" class="filter__item__input" placeholder="Enter ip address">
+                                    <input type="text" class="filter__item__input" placeholder="Enter device make">
+                                    <input type="text" class="filter__item__input" placeholder="Enter device model">
+                                    <input type="text" class="filter__item__input" placeholder="Enter country">
+                                    <input type="text" class="filter__item__input" placeholder="Enter city">
+                                    <input type="text" class="filter__item__input" placeholder="Enter language">
+                                </div>
+
+                                <a class="close-item">
+                                    <svg class="sprite-icon" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="filter__list--sub d-none" id="filter_network">
+                            <div class="filter__item d-flex--between mb-2">
+                                <div>
+                                    <input type="text" class="filter__item__input" placeholder="Enter VK ID">
+                                </div>
+
+                                <a class="close-item">
+                                    <svg class="sprite-icon" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <button class="btn btn--add-filter" id="add_filter">+ add more</button>
+                    </div>
+
+                    <div class="d-flex mt-3">
+                        <button class="btn btn--secondary" id="show_profiles">Show Profiles</button>
+                        <button class="btn btn--cancel ml-3" id="close_filter">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="section__prev-forms d-none">
+                    <div class="prev-form__list">
+                        <div class="prev-form__list__item">
+                            <div class="d-flex">
+                                <h3>22/03/2018 12:00 PM</h3>
+                                <div class="d-flex flex-1">
+                                    <div class="search__item"><span>City: New York</span></div>
+                                    <div class="search__item"><span>Country: France</span></div>
+                                    <div class="search__item"><span>IP: 216.58.216.164</span></div>
+                                    <div class="search__item"><span>Language: English</span></div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex--end mt-3">
+                                <button class="btn">Show Profiles</button>
+                                <button class="btn">...</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
