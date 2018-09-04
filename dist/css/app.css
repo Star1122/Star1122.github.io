@@ -281,9 +281,9 @@ header {
   height: 53px;
   padding: 0.625rem 1.5rem;
   background-color: var(--clr-block);
-  -webkit-box-shadow: 0 0 8px 0 rgba(225, 232, 230, 0.68);
-  -moz-box-shadow: 0 0 8px 0 rgba(225, 232, 230, 0.68);
-  box-shadow: 0 0 8px 0 rgba(225, 232, 230, 0.68); }
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(225, 232, 230, 0.68);
+  -moz-box-shadow: 0 0 0.5rem 0 rgba(225, 232, 230, 0.68);
+  box-shadow: 0 0 0.5rem 0 rgba(225, 232, 230, 0.68); }
   header .logo {
     height: 25px;
     display: block; }
@@ -448,9 +448,9 @@ header {
     z-index: 100;
     background-color: var(--clr-block);
     overflow-y: auto;
-    -webkit-box-shadow: 0 0 8px 0 rgba(225, 232, 230, 0.68);
-    -moz-box-shadow: 0 0 8px 0 rgba(225, 232, 230, 0.68);
-    box-shadow: 0 0 8px 0 rgba(225, 232, 230, 0.68); }
+    -webkit-box-shadow: 0 0 0.5rem 0 rgba(225, 232, 230, 0.68);
+    -moz-box-shadow: 0 0 0.5rem 0 rgba(225, 232, 230, 0.68);
+    box-shadow: 0 0 0.5rem 0 rgba(225, 232, 230, 0.68); }
   .modal--submit .modal__content {
     right: 126px;
     width: 624px;
@@ -523,6 +523,41 @@ header {
     line-height: 2rem; }
     .prev-form__list__item h3 + .d-flex, .prev-form__list__item h3 + .d-flex--center, .prev-form__list__item h3 + .search__item, .prev-form__list__item h3 + .close-item, .prev-form__list__item h3 + .d-flex--between, .prev-form__list__item h3 + .btn, .prev-form__list__item h3 + .d-flex--end, .prev-form__list__item h3 + a {
       flex-wrap: wrap; }
+  .prev-form__list__item .edit-option {
+    position: relative; }
+    .prev-form__list__item .edit-option__popup {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      z-index: 100;
+      display: none;
+      padding: 1rem 1.5rem;
+      background-color: var(--clr-block);
+      -webkit-box-shadow: 0 0 0.5rem rgba(224, 225, 241, 0.68);
+      -moz-box-shadow: 0 0 0.5rem rgba(224, 225, 241, 0.68);
+      box-shadow: 0 0 0.5rem rgba(224, 225, 241, 0.68); }
+      .prev-form__list__item .edit-option__popup:before, .prev-form__list__item .edit-option__popup:after {
+        content: '';
+        position: absolute;
+        right: 0.5rem;
+        width: 0;
+        height: 0;
+        border-left: 0.8rem solid transparent;
+        border-right: 0.8rem solid transparent; }
+      .prev-form__list__item .edit-option__popup:before {
+        top: -8px;
+        border-bottom: 0.5rem solid rgba(224, 225, 241, 0.2); }
+      .prev-form__list__item .edit-option__popup:after {
+        top: -6px;
+        border-bottom: 0.5rem solid white; }
+    .prev-form__list__item .edit-option .btn {
+      padding: 0.5rem;
+      border: 0 !important; }
+    .prev-form__list__item .edit-option > .btn--cancel:hover, .prev-form__list__item .edit-option > .btn--cancel:active, .prev-form__list__item .edit-option > .btn--cancel.active {
+      background-color: transparent !important;
+      color: var(--clr-accent) !important; }
+    .prev-form__list__item .edit-option > .btn--cancel.active + .edit-option__popup {
+      display: flex; }
 
 /* =================================================================== */
 /* ------------------------------ Button ----------------------------- */
