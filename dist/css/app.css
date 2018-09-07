@@ -542,7 +542,6 @@ header {
   top: 53px;
   bottom: 0;
   width: 250px;
-  overflow-y: auto;
   font-size: 0.75rem; }
   .sidebar__menu__item {
     padding: 1rem 0;
@@ -553,7 +552,10 @@ header {
       border-color: var(--clr-accent);
       color: var(--clr-accent); }
   .sidebar__content {
-    padding: 0 0.5rem 1rem; }
+    width: calc(100% + 1rem);
+    height: calc(100% - 50px);
+    padding: 0 0.5rem 1rem;
+    overflow-y: scroll; }
   .sidebar__card {
     padding: 1rem;
     background-color: var(--clr-block);
