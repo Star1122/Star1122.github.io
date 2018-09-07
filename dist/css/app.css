@@ -43,18 +43,6 @@
 /*----- FONTS -----*/
 :root {
   /*----- COLORS -----*/
-  --clr-textLL:		#c6c8c8;
-  /*text color lighter*/
-  --clr-textL:		#737474;
-  /*text color light*/
-  --clr-textD:		#010101;
-  /*text color dark*/
-  --clr-textAA:		#e15c79;
-  /*text color accented alternative*/
-  --clr-accentL:	#edf2f5;
-  /*icon color accented light*/
-  --clr-accentD:	#286bb4;
-  /*icon color accented dark*/
   --clr-basic:		#484848;
   /* basic color */
   --clr-basicL:		#dcdcdc;
@@ -67,74 +55,46 @@
   /* basic dark color */
   --clr-accent:		#13af7d;
   /* accent color */
+  --clr-accentL:	#25c89b;
+  /* accent light color */
   --clr-accentB:	#2fb3cc;
   /* accent blue color */
   --clr-back:			#f6f7f8;
   /* background color */
   --clr-backL:		#f3f3f3;
   /* background light color */
+  --clr-backLL:		#f0f0f2;
+  /* background lighter color */
   --clr-badge:    #f63756;
   /* badge color */
   --clr-block:		#ffffff;
-  /* block color */
-  --clr-separator:	#e8e8e8;
-  /*separators and borders color basic*/
-  --clr-separatorD:	#bfc0c0;
-  /*separators and borders color dark*/
-  --clr-important:	#bfc0c0;
-  /*important and borders color dark*/
-  --clr-backLL:		  #F3F3F3;
-  /*background color lighter*/
-  --clr-back-new:		#E8E8E8;
-  /*background color basic*/
-  --clr-backA:		  #e6f1f8;
-  /*background color accented*/
-  --clr-text-tooltip: #2C589C;
-  /*basic tooltip text color*/
-  --clr-back-tooltip: #F9F9F9;
-  /*basic tooltip  background color*/ }
+  /* block color */ }
 
 .dark-theme {
-  --clr-textLL:		#c6c8c8;
-  /*text color lighter*/
-  --clr-textL:		#9ba6b2;
-  /*text color light*/
-  --clr-textD:		#9ba6b2;
-  /*text color dark*/
-  --clr-textAA:		#e15c79;
-  /*text color accented alternative*/
-  --clr-icon:			#4f6c82;
-  /*icon color basic*/
-  --clr-iconD:		#6a717a;
-  /*icon color dark*/
-  --clr-accent:		#4a9cd5;
-  /*icon color accented*/
-  --clr-accentL:	#0c1017;
-  /*icon color accented light*/
-  --clr-accentD:	#286bb4;
-  /*icon color accented dark*/
-  --clr-separator:	#24425b;
-  /*separators and borders color basic*/
-  --clr-separatorD:	#24425b;
-  /*separators and borders color dark*/
-  --clr-important:	#9BA6B2;
-  /*important and borders color dark*/
-  --clr-backL:		  #141925;
-  /*background color light*/
-  --clr-backLL:		  #1e2634;
-  /*background color lighter*/
-  --clr-back:			  #1B293F;
-  /*background color basic*/
-  --clr-back-new:		#131A23;
-  /*background color basic*/
-  --clr-backA:		  #213040;
-  /*background color accented*/
-  --clr-block:		  #18202d;
-  /*basic block color basic*/
-  --clr-text-tooltip: #F9F9F9;
-  /*tooltip text color dark*/
-  --clr-back-tooltip: #2B569A;
-  /*tooltip  background color dark*/ }
+  --clr-basic:    #484848;
+  /* basic color */
+  --clr-basicL:   #dcdcdc;
+  /* basic light color */
+  --clr-basicLL:  #d5d3d3;
+  /* basic lighter color */
+  --clr-basicG:   #3b413c;
+  /* basic gray color */
+  --clr-basicD:   #000000;
+  /* basic dark color */
+  --clr-accent:   #13af7d;
+  /* accent color */
+  --clr-accentB:  #2fb3cc;
+  /* accent blue color */
+  --clr-back:     #f6f7f8;
+  /* background color */
+  --clr-backL:    #f3f3f3;
+  /* background light color */
+  --clr-backLL:   #f0f0f2;
+  /* background lighter color */
+  --clr-badge:    #f63756;
+  /* badge color */
+  --clr-block:    #ffffff;
+  /* block color */ }
 
 /* =================================================================== */
 /* ------------------------------ Mixin ------------------------------ */
@@ -323,6 +283,12 @@ header {
 .container {
   padding: 2.25rem 150px 1.5rem;
   font-size: 0.75rem; }
+  .container--map {
+    position: relative;
+    height: calc(100vh - 53px);
+    padding: 0;
+    margin-left: 250px;
+    background-color: var(--clr-block); }
 
 .section__selected {
   padding: 0.75rem 1rem 0.75rem 1.25rem;
@@ -558,6 +524,74 @@ header {
       color: var(--clr-accent) !important; }
     .prev-form__list__item .edit-option > .btn--cancel.active + .edit-option__popup {
       display: flex; }
+
+/**
+ Map View
+ */
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; }
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 53px;
+  bottom: 0;
+  width: 250px;
+  overflow-y: auto;
+  font-size: 0.75rem; }
+  .sidebar__menu__item {
+    padding: 1rem 0;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+    cursor: pointer; }
+    .sidebar__menu__item.active {
+      border-color: var(--clr-accent);
+      color: var(--clr-accent); }
+  .sidebar__content {
+    padding: 0 0.5rem 1rem; }
+  .sidebar__card {
+    padding: 1rem;
+    background-color: var(--clr-block);
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 0 0.5rem 0 rgba(224, 231, 228, 0.68);
+    -moz-box-shadow: 0 0 0.5rem 0 rgba(224, 231, 228, 0.68);
+    box-shadow: 0 0 0.5rem 0 rgba(224, 231, 228, 0.68); }
+    .sidebar__card__content span {
+      min-width: 1.5rem;
+      line-height: 1;
+      text-align: center; }
+      .sidebar__card__content span:nth-child(2) {
+        padding: 0.125rem 0.5rem;
+        background-color: var(--clr-backLL);
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        border-radius: 0.5rem; }
+    .sidebar__card__cluster {
+      position: relative;
+      padding-left: 1.5rem; }
+      .sidebar__card__cluster:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--clr-accent);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+    .sidebar__card__actor {
+      background-color: transparent !important;
+      font-weight: 600;
+      color: var(--clr-accentL);
+      cursor: pointer; }
 
 /* =================================================================== */
 /* ------------------------------ Button ----------------------------- */
