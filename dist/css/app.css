@@ -563,14 +563,14 @@ header {
     border: 0;
     text-align: center; }
   .filter__list .calc {
+    width: 2rem;
+    height: 2rem;
+    background: transparent url("../../img/plus.png") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
     cursor: pointer; }
-    .filter__list .calc .sprite-icon {
-      width: 2rem;
-      height: 2rem;
-      fill: none !important;
-      stroke: var(--clr-accent) !important; }
-    .filter__list .calc--minus .sprite-icon {
-      stroke: rgba(19, 175, 125, 0.5); }
+    .filter__list .calc--minus {
+      background-image: url("../../img/minus.png"); }
 
 .prev-form__list__item {
   padding: 1.25rem 0;
