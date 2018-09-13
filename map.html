@@ -85,7 +85,7 @@
         </div>
 
         <div class="sidebar__content sidebar__content--persona">
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">NAI's (2)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span>1: 40.759682, -73.976886</span>
@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">DEVICES (2)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span>Samsung</span>
@@ -109,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">Ip's (1)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span>1. 127.0.0.1</span>
@@ -117,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">CLUSTERS (2)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span class="sidebar__card__cluster">Cluster 1</span>
@@ -129,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">MOST POPULAR APP (2)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span>Google Maps</span>
@@ -141,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">LANGUAGES FOUND (2)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span>English</span>
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="sidebar__card mt-3">
+            <div class="sidebar__card mb-3">
                 <h3 class="sidebar__card__title">ACTORS FOUND (2)</h3>
                 <div class="sidebar__card__content mt-2 d-flex--between">
                     <span>6D92...5761</span>
@@ -271,7 +271,7 @@
         <div class="popup popup--marker d-none">
             <div class="d-flex--between">
                 <h1>Marker Details</h1>
-                <a class="close-marker">
+                <a class="popup--marker__close">
                     <svg class="sprite-icon" role="img" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
                     </svg>
@@ -321,7 +321,7 @@
 
             <div class="mt-4 d-flex">
                 <h3>Link</h3>
-                <a href="www.dartboard.com/dartboard-admin-html/" class="flex-1" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                <a href="https://www.dartboard.com/dartboard-admin-html/" class="flex-1" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
             </div>
         </div>
 
@@ -422,6 +422,201 @@
                 <div class="d-flex mt-3">
                     <button class="btn btn--secondary" id="apply_filter">Apply</button>
                     <button class="btn btn--cancel ml-3" id="close_filter">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal--table d-none">
+            <div class="modal__content">
+                <div class="modal--table__header">
+                    <div class="modal--table__title d-flex--between">
+                        <h1>Summary of Similar Actors</h1>
+                        <a class="modal--table__close">
+                            <svg class="sprite-icon" role="img" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#close"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1"><h3>Device ID</h3></div>
+                        <div class="modal--table__td flex-1"><h3>Similarity</h3></div>
+                        <div class="modal--table__td flex-1"><h3>Cluster ID</h3></div>
+                        <div class="modal--table__td flex-1"><h3>Cluster Size</h3></div>
+                        <div class="modal--table__td flex-1"><h3>Device</h3></div>
+                        <div class="modal--table__td flex-2"><h3>Languages</h3></div>
+                        <div class="modal--table__td flex-1"><h3>NAI</h3></div>
+                        <div class="modal--table__td flex-1"><h3>Link</h3></div>
+                    </div>
+                </div>
+
+                <div class="modal--table__content">
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
+
+
+                    <div class="modal--table__tr d-flex align-items-center">
+                        <div class="modal--table__td flex-1">6D92078A-8246-4BA4-AE5B-76104861E7DC</div>
+                        <div class="modal--table__td flex-1 similarity">0.89</div>
+                        <div class="modal--table__td flex-1">3</div>
+                        <div class="modal--table__td flex-1">8</div>
+                        <div class="modal--table__td flex-1">Samsung SJ10</div>
+                        <div class="modal--table__td flex-2">English, Spanish, Portuguese, Romanian</div>
+                        <div class="modal--table__td flex-1"><a href="#">Show</a></div>
+                        <div class="modal--table__td flex-1">
+                            <a href="https://www.dartboard.com/dartboard-admin-html/" target="_blank">www.dartboard.com/dartboard-admin-html/</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

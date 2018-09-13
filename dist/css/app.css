@@ -57,6 +57,8 @@
   /* accent color */
   --clr-accentL:	#25c89b;
   /* accent light color */
+  --clr-accentLL:	#4cd758;
+  /* accent lighter color */
   --clr-accentB:	#2fb3cc;
   /* accent blue color */
   --clr-back:			#f6f7f8;
@@ -71,29 +73,33 @@
   /* block color */ }
 
 .dark-theme {
-  --clr-basic:    #484848;
+  --clr-basic:		#484848;
   /* basic color */
-  --clr-basicL:   #dcdcdc;
+  --clr-basicL:		#dcdcdc;
   /* basic light color */
-  --clr-basicLL:  #d5d3d3;
+  --clr-basicLL:	#d5d3d3;
   /* basic lighter color */
-  --clr-basicG:   #3b413c;
+  --clr-basicG:		#3b413c;
   /* basic gray color */
-  --clr-basicD:   #000000;
+  --clr-basicD:		#000000;
   /* basic dark color */
-  --clr-accent:   #13af7d;
+  --clr-accent:		#13af7d;
   /* accent color */
-  --clr-accentB:  #2fb3cc;
+  --clr-accentL:	#25c89b;
+  /* accent light color */
+  --clr-accentLL:	#4cd758;
+  /* accent lighter color */
+  --clr-accentB:	#2fb3cc;
   /* accent blue color */
-  --clr-back:     #f6f7f8;
+  --clr-back:			#f6f7f8;
   /* background color */
-  --clr-backL:    #f3f3f3;
+  --clr-backL:		#f3f3f3;
   /* background light color */
-  --clr-backLL:   #f0f0f2;
+  --clr-backLL:		#f0f0f2;
   /* background lighter color */
   --clr-badge:    #f63756;
   /* badge color */
-  --clr-block:    #ffffff;
+  --clr-block:		#ffffff;
   /* block color */ }
 
 /* =================================================================== */
@@ -162,6 +168,9 @@ h4 {
 
 .mb-2 {
   margin-bottom: 0.75rem !important; }
+
+.mb-3 {
+  margin-bottom: 1rem !important; }
 
 .mb-6 {
   margin-bottom: 3rem !important; }
@@ -442,6 +451,52 @@ header {
     right: 150px; }
   .modal--map__filter .modal__content {
     left: 260px; }
+  .modal--table .modal__content {
+    top: 100px;
+    bottom: 100px;
+    left: calc(50% - 500px);
+    width: 1000px;
+    overflow: hidden; }
+  .modal--table__header {
+    margin-right: -1.25rem;
+    background-color: var(--clr-back);
+    overflow-y: scroll; }
+  .modal--table__title {
+    padding: 2rem 1.5rem; }
+  .modal--table__close {
+    cursor: pointer; }
+    .modal--table__close .sprite-icon {
+      fill: var(--clr-basicL); }
+  .modal--table__content {
+    height: calc(100% - 141px);
+    margin-right: -1.25rem;
+    overflow-y: scroll; }
+  .modal--table__tr {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--clr-backL); }
+  .modal--table__td {
+    height: 1.25rem;
+    display: -webkit-box;
+    overflow: hidden;
+    line-height: 1.25rem;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+    .modal--table__td:not(:first-child) {
+      margin-left: 0.5rem; }
+    .modal--table__td a {
+      width: 100%;
+      display: -webkit-box;
+      overflow: hidden;
+      font-weight: 600;
+      color: var(--clr-accent);
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1; }
+    .modal--table__td.similarity {
+      font-weight: 600;
+      color: var(--clr-accentLL); }
 
 .tab__list {
   margin-top: 100px;
@@ -512,11 +567,10 @@ header {
     .filter__list .calc .sprite-icon {
       width: 2rem;
       height: 2rem;
-      fill: none;
-      stroke: var(--clr-basic); }
-    .filter__list .calc:not(.disabled):hover .sprite-icon, .filter__list .calc:not(.disabled):active .sprite-icon, .filter__list .calc:not(.disabled).active .sprite-icon {
-      fill: none;
-      stroke: var(--clr-accent); }
+      fill: none !important;
+      stroke: var(--clr-accent) !important; }
+    .filter__list .calc--minus .sprite-icon {
+      stroke: rgba(19, 175, 125, 0.5); }
 
 .prev-form__list__item {
   padding: 1.25rem 0;
@@ -591,7 +645,7 @@ header {
   .sidebar__content {
     width: calc(100% + 1rem);
     height: calc(100% - 50px);
-    padding: 0 0.5rem 1rem;
+    padding: 1rem 0.5rem 0;
     overflow-y: scroll; }
   .sidebar__card {
     padding: 1rem 0;
@@ -682,9 +736,9 @@ header {
     width: 300px; }
     .popup--marker h3 {
       width: 85px; }
-    .popup--marker .close-marker {
+    .popup--marker__close {
       cursor: pointer; }
-      .popup--marker .close-marker .sprite-icon {
+      .popup--marker__close .sprite-icon {
         fill: var(--clr-basicL); }
 
 /* =================================================================== */
